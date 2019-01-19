@@ -1,8 +1,8 @@
 \relative c' {
-  c
-  \tweak font-size 5 c
-  \tweak X-offset 1 \tweak Y-offset -1 c
-  \override Stem.thickness = 5
-  \shape #'((0 . 0) (10 . 5)
-            (-10 . 5) (0 . 0)) Tie c~ c
+  \time 5/4
+  \tweak font-size 4 f8
+  \override NoteHead.color = #darkred e
+  \once \override Tie.direction = #UP f2~
+  \shape #'((0 . 0) (10 . 5) (-10 . 5) (0 . 0)) Tie f~ |
+  f2.~ f2 |
 }
