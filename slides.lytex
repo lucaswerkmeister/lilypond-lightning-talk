@@ -79,9 +79,7 @@
     \lstinputlisting{pitches-ises.ly}
   \end{figure}
 
-  LilyPond automatically adds accidentals and naturals as needed,
-  based on the key signature and accidentals or naturals currently in effect.
-  Several styles are available (\nth{18} century, \nth{20} century, piano, …).
+  LilyPond automatically adds accidentals and naturals as needed.
 \end{frame}
 
 \begin{frame}[fragile]
