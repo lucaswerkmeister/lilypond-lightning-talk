@@ -1,0 +1,142 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage[super]{nth}
+
+\beamertemplatenavigationsymbolsempty
+
+\lstset{basicstyle=\ttfamily}
+
+\begin{document}
+
+\begin{frame}[fragile]
+  \frametitle{LilyPond}
+  LilyPond is a musical score typesetter,
+  a program to generate beautiful scores from textual input files.
+  It’s free software and available on all major desktop operating systems,
+  and you can also try it out online at \href{http://lilybin.com/}{lilybin.com}.
+
+  \begin{figure}
+    \begin{lilypond}
+      {
+        \time 2/4
+        \relative c'' {
+          c8-. \tuplet 3/2 { g16( fis g) } as8-- g-. |
+          r <f b>-. <e c'>-> r | \bar "|."
+        }
+      }
+    \end{lilypond}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Pitches}
+  The pitch of a note is denoted by a single letter from A to G.
+
+  \begin{figure}
+    \begin{lilypond}
+      \relative a {
+        a_\markup { \typewriter "a" }
+        b_\markup { \typewriter "b" }
+        c_\markup { \typewriter "c" }
+        d_\markup { \typewriter "d" }
+        e_\markup { \typewriter "e" }
+        f_\markup { \typewriter "f" }
+        g_\markup { \typewriter "g" }
+        a_\markup { \typewriter "a" }
+      }
+    \end{lilypond}
+  \end{figure}
+
+  Usually, relative mode is used
+  so that the octave doesn’t “jump around”
+  (\lstinline!\relative a { a b c d e f g a }!).
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Pitches}
+  Change the octave of a note
+  by appending commas (lower) or apostrophes (higher).
+
+  \begin{figure}
+    \lilypondfile{pitches-octaves.ly}
+  \end{figure}
+  \begin{figure}
+    \lstinputlisting{pitches-octaves.ly}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Pitches}
+  Raise or lower the pitch by a semitone
+  with the suffix “-is” or “-es”.
+
+  \begin{figure}
+    \lilypondfile{pitches-ises.ly}
+  \end{figure}
+  \begin{figure}
+    \lstinputlisting{pitches-ises.ly}
+  \end{figure}
+
+  LilyPond automatically adds accidentals and naturals as needed,
+  based on the key signature and accidentals or naturals currently in effect.
+  Several styles are available (\nth{18} century, \nth{20} century, piano, …).
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Durations}
+  Durations are specified with a numerical suffix (4 = quarter note etc.),
+  optionally followed by periods for dotted notes.
+  Omitting the duration reuses the last note’s duration.
+
+  \begin{figure}
+    \lilypondfile{durations.ly}
+  \end{figure}
+  \begin{figure}
+    \lstinputlisting{durations.ly}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Tweaks}
+  LilyPond is almost infinitely configurable.
+  All graphical objects you see on the screen have properties that you can override,
+  either for just the next object or for the rest of the score.
+  Other properties of the score
+  (not directly connected to individual grobs)
+  are also tweakable.
+
+  \begin{figure}
+    \lilypondfile{tweaks.ly}
+  \end{figure}
+  \begin{figure}
+    \lstinputlisting{tweaks.ly}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Scheme}
+  Internally, much of LilyPond is backed by Scheme,
+  a dialect of the Lisp programming language.
+  If the overrides are not enough for you,
+  you can also mess with the score through Scheme programming.
+
+  \begin{figure}
+    \lilypondfile{scheme.ly}
+  \end{figure}
+  \begin{figure}
+    \lstinputlisting{scheme.ly}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{More information}
+  \begin{itemize}
+    \item \href{http://lilypond.org/doc/v2.18/Documentation/learning/}{LilyPond Learning Manual}
+    \item \href{http://lilypond.org/doc/v2.18/Documentation/notation/}{LilyPond Notation Manual}
+    \item \href{http://lsr.di.unimi.it/LSR/Browse}{LilyPond Snippet Repository}
+  \end{itemize}
+\end{frame}
+
+\end{document}
