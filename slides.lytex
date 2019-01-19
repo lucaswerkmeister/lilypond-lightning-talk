@@ -55,6 +55,20 @@
 \end{frame}
 
 \begin{frame}[fragile]
+  \frametitle{Durations}
+  Durations are specified with a numerical suffix (4 = quarter note etc.),
+  optionally followed by periods for dotted notes.
+  Omitting the duration reuses the last note’s duration.
+
+  \begin{figure}
+    \lilypondfile{durations.ly}
+  \end{figure}
+  \begin{figure}
+    \lstinputlisting{durations.ly}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[fragile]
   \frametitle{Pitches}
   Change the octave of a note
   by appending commas (lower) or apostrophes (higher).
@@ -80,20 +94,6 @@
   \end{figure}
 
   LilyPond automatically adds accidentals and naturals as needed.
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Durations}
-  Durations are specified with a numerical suffix (4 = quarter note etc.),
-  optionally followed by periods for dotted notes.
-  Omitting the duration reuses the last note’s duration.
-
-  \begin{figure}
-    \lilypondfile{durations.ly}
-  \end{figure}
-  \begin{figure}
-    \lstinputlisting{durations.ly}
-  \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
