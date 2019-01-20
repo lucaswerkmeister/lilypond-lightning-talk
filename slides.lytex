@@ -135,6 +135,9 @@
     \item \href{http://lilypond.org/doc/v2.18/Documentation/notation/}{LilyPond Notation Manual}
     \item \href{http://lsr.di.unimi.it/LSR/Browse}{LilyPond Snippet Repository}
   \end{itemize}
+  \begin{figure}
+    \lilypondfile{end.ly}
+  \end{figure}
 \end{frame}
 
 \end{document}
