@@ -4,6 +4,6 @@
            (ly:grob-property grob 'direction))
         red
         blue))
-  \key bes \major
-  f4. bes8 a4 bes | c g c2 |
+  \key c \minor
+  c'2 ces4 es, | bes' des, as'2 |
 }
