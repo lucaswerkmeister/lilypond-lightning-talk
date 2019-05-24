@@ -6,6 +6,10 @@
 
 \beamertemplatenavigationsymbolsempty
 
+\title{LilyPond}
+\author{Lucas Werkmeister}
+\date{EnthusiastiCon 2019}
+
 \lstset{basicstyle=\ttfamily}
 
 \begin{document}
