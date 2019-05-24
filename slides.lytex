@@ -49,75 +49,56 @@
 
 \begin{frame}[fragile]
   \frametitle{Durations}
-  Durations are specified with a numerical suffix (4 = quarter note etc.),
-  optionally followed by periods for dotted notes.
-  Omitting the duration reuses the last note’s duration.
-
-  \begin{figure}
-    \lilypondfile{durations.ly}
-  \end{figure}
   \begin{figure}
     \lstinputlisting{durations.ly}
   \end{figure}
+  {\Huge$\Rightarrow$}
+  \begin{figure}
+    \lilypondfile{durations.ly}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Pitches}
-  Change the octave of a note
-  by appending commas (lower) or apostrophes (higher).
-
-  \begin{figure}
-    \lilypondfile{pitches-octaves.ly}
-  \end{figure}
   \begin{figure}
     \lstinputlisting{pitches-octaves.ly}
   \end{figure}
+  {\Huge$\Rightarrow$}
+  \begin{figure}
+    \lilypondfile{pitches-octaves.ly}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Pitches}
-  Raise or lower the pitch by a semitone
-  with the suffix “-is” or “-es”.
-
-  \begin{figure}
-    \lilypondfile{pitches-ises.ly}
-  \end{figure}
   \begin{figure}
     \lstinputlisting{pitches-ises.ly}
   \end{figure}
-
-  LilyPond automatically adds accidentals and naturals as needed.
+  {\Huge$\Rightarrow$}
+  \begin{figure}
+    \lilypondfile{pitches-ises.ly}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Tweaks}
-  LilyPond is almost infinitely configurable.
-  All graphical objects you see on the screen have properties that you can override,
-  either for just the next object or for the rest of the score.
-  Other properties of the score
-  (not directly connected to individual grobs)
-  are also tweakable.
-
-  \begin{figure}
-    \lilypondfile{tweaks.ly}
-  \end{figure}
   \begin{figure}
     \lstinputlisting{tweaks.ly}
+  \end{figure}
+  {\Huge$\Rightarrow$}
+  \begin{figure}
+    \lilypondfile{tweaks.ly}
   \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Scheme}
-  Internally, much of LilyPond is backed by Scheme,
-  a dialect of the Lisp programming language.
-  If the overrides are not enough for you,
-  you can also mess with the score through Scheme programming.
-
-  \begin{figure}
-    \lilypondfile{scheme.ly}
-  \end{figure}
   \begin{figure}
     \lstinputlisting{scheme.ly}
+  \end{figure}
+  {\Huge$\Rightarrow$}
+  \begin{figure}
+    \lilypondfile{scheme.ly}
   \end{figure}
 \end{frame}
 
