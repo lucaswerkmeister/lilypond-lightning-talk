@@ -12,11 +12,11 @@
 
 \begin{frame}[fragile]
   \frametitle{LilyPond}
-  LilyPond is a musical score typesetter,
-  a program to generate beautiful scores from textual input files.
-  It’s free software and available on all major desktop operating systems,
-  and you can also try it out online at \href{http://lilybin.com/}{lilybin.com}.
 
+  \begin{figure}
+    \lstinputlisting{title.ly}
+  \end{figure}
+  {\Huge$\Rightarrow$}
   \begin{figure}
     \lilypondfile{title.ly}
   \end{figure}
@@ -126,6 +126,7 @@
     \item \href{http://lilypond.org/doc/v2.18/Documentation/learning/}{LilyPond Learning Manual}
     \item \href{http://lilypond.org/doc/v2.18/Documentation/notation/}{LilyPond Notation Manual}
     \item \href{http://lsr.di.unimi.it/LSR/Browse}{LilyPond Snippet Repository}
+    \item \href{http://lilybin.com/}{lilybin.com}
   \end{itemize}
   \begin{figure}
     \lilypondfile{end.ly}
