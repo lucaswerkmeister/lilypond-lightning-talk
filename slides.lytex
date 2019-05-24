@@ -24,8 +24,13 @@
 
 \begin{frame}[fragile]
   \frametitle{Pitches}
-  The pitch of a note is denoted by a single letter from A to G.
 
+  \begin{figure}
+    \begin{lstlisting}
+\relative a { a b c d e f g a }
+    \end{lstlisting}
+  \end{figure}
+  {\Huge$\Rightarrow$}
   \begin{figure}
     \begin{lilypond}
       \relative a {
@@ -40,10 +45,6 @@
       }
     \end{lilypond}
   \end{figure}
-
-  Usually, relative mode is used
-  so that the octave doesn’t “jump around”
-  (\lstinline!\relative a { a b c d e f g a }!).
 \end{frame}
 
 \begin{frame}[fragile]
