@@ -102,6 +102,13 @@
   \end{figure}
 \end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Scheme}
+  \begin{figure}
+    \lstinputlisting[basicstyle=\tiny]{end.ly}
+  \end{figure}
+\end{frame}
+
 \begin{frame}
   \frametitle{More information}
   \begin{itemize}
