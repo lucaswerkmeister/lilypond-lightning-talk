@@ -18,15 +18,7 @@
   and you can also try it out online at \href{http://lilybin.com/}{lilybin.com}.
 
   \begin{figure}
-    \begin{lilypond}
-      {
-        \time 2/4
-        \relative c'' {
-          c8-. \tuplet 3/2 { g16( fis g) } as8-- g-. |
-          r <f b>-. <e c'>-> r | \bar "|."
-        }
-      }
-    \end{lilypond}
+    \lilypondfile{title.ly}
   \end{figure}
 \end{frame}
 
