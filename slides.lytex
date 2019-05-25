@@ -5,7 +5,7 @@
 \usepackage[super]{nth}
 
 \beamertemplatenavigationsymbolsempty
-\setbeamertemplate{footline}[text line]{%
+\setbeamertemplate{headline}[text line]{%
   \parbox{0.3\linewidth}{%
     \insertshortauthor%
   }%
@@ -41,12 +41,6 @@
   \frametitle{Pitches}
 
   \begin{figure}
-    \begin{lstlisting}
-\relative a { a b c d e f g a }
-    \end{lstlisting}
-  \end{figure}
-  {\Huge$\Rightarrow$}
-  \begin{figure}
     \begin{lilypond}
       \relative a {
         a_\markup { \typewriter "a" }
@@ -60,60 +54,60 @@
       }
     \end{lilypond}
   \end{figure}
+  \begin{figure}
+    \begin{lstlisting}
+\relative a { a b c d e f g a }
+    \end{lstlisting}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Durations}
   \begin{figure}
-    \lstinputlisting{durations.ly}
-  \end{figure}
-  {\Huge$\Rightarrow$}
-  \begin{figure}
     \lilypondfile{durations.ly}
+  \end{figure}
+  \begin{figure}
+    \lstinputlisting{durations.ly}
   \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Pitches}
-  \begin{figure}
-    \lstinputlisting{pitches-octaves.ly}
-  \end{figure}
-  {\Huge$\Rightarrow$}
   \begin{figure}
     \lilypondfile{pitches-octaves.ly}
   \end{figure}
+  \begin{figure}
+    \lstinputlisting{pitches-octaves.ly}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Pitches}
   \begin{figure}
-    \lstinputlisting{pitches-ises.ly}
-  \end{figure}
-  {\Huge$\Rightarrow$}
-  \begin{figure}
     \lilypondfile{pitches-ises.ly}
+  \end{figure}
+  \begin{figure}
+    \lstinputlisting{pitches-ises.ly}
   \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Tweaks}
   \begin{figure}
-    \lstinputlisting{tweaks.ly}
-  \end{figure}
-  {\Huge$\Rightarrow$}
-  \begin{figure}
     \lilypondfile{tweaks.ly}
+  \end{figure}
+  \begin{figure}
+    \lstinputlisting{tweaks.ly}
   \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Scheme}
   \begin{figure}
-    \lstinputlisting{scheme.ly}
-  \end{figure}
-  {\Huge$\Rightarrow$}
-  \begin{figure}
     \lilypondfile{scheme.ly}
+  \end{figure}
+  \begin{figure}
+    \lstinputlisting{scheme.ly}
   \end{figure}
 \end{frame}
 
