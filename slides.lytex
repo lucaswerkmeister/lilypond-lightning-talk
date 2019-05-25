@@ -5,7 +5,7 @@
 \usepackage[super]{nth}
 
 \beamertemplatenavigationsymbolsempty
-\setbeamertemplate{footline}[text line]{%
+\setbeamertemplate{headline}[text line]{%
   \parbox{0.3\linewidth}{%
     \insertshortauthor%
   }%
