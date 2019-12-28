@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: slides.pdf
+all: slides.pdf c3lingo.pdf
 
 %.tex: %.lytex
 	lilypond-book --pdf $<

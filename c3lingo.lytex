@@ -1,0 +1,188 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english,german]{babel}
+
+\beamertemplatenavigationsymbolsempty
+
+\setlength{\parskip}{5mm}
+
+\begin{document}
+
+\begin{frame}
+  Hallo liebes c3lingo-Team! Vielen Dank für eure Arbeit $\heartsuit$
+
+  Auf den nächsten Folien versuche ich, etwas nützliches Material für euch bereitzustellen,
+  besonders, falls ihr euch mit Musiknotation noch nicht so sehr auskennt.
+  Ich halte den Vortrag auf Englisch, kenne mich aber in der Musiknotation eigentlich eher auf Deutsch aus,
+  also kriegt ihr jetzt garantiert die richtige Terminologie und auf der Bühne rede ich möglicherweise Blödsinn :D
+\end{frame}
+
+\begin{frame}
+  \frametitle{Notenlänge}
+  Die Länge einer Note wird von der Form des Noten\emph{kopfs} und -\emph{halses} (\foreignlanguage{english}{head} und \foreignlanguage{english}{stem}) bestimmt.
+  Die Namen werden dabei recht direkt übersetzt.
+
+  \begin{tabular}{l|l|l}
+    Note & Deutsch & Englisch \\ \hline
+    \begin{lilypond}
+      \markup { \note #"1" #UP }
+    \end{lilypond}
+    & ganze Note & \foreignlanguage{english}{whole note} \\
+    \begin{lilypond}
+      \markup { \note #"2" #UP }
+    \end{lilypond}
+    & halbe Note & \foreignlanguage{english}{half note} \\
+    \begin{lilypond}
+      \markup { \note #"4" #UP }
+    \end{lilypond}
+    & Viertelnote & \foreignlanguage{english}{quarter note} \\
+    \begin{lilypond}
+      \markup { \note #"8" #UP }
+    \end{lilypond}
+    & Achtelnote & \foreignlanguage{english}{eighth note} \\
+    \begin{lilypond}
+      \markup { \note #"16" #UP }
+    \end{lilypond}
+    & Sechzehntelnote usw. & \foreignlanguage{english}{sixteenth note} \\
+  \end{tabular}
+
+  (In beiden Sprachen kann „Note“ auch weggelassen werden, z.\,B. „eine Viertel“.)
+\end{frame}
+
+\begin{frame}
+  \frametitle{Notenlänge}
+  Achtel- und kürzere Noten können auch durch \emph{Balken} (\foreignlanguage{english}{beams}) verbunden werden,
+  anstatt einzelne \emph{Fähnchen} (\foreignlanguage{english}{flags}) zu haben,
+  wobei die Anzahl der Balken an einem Hals der Anzahl der Fähnchen entspricht.
+
+  Beispiel: \lilypond[fragment]{c'8[ c'16]} und \lilypond[fragment]{c'8\noBeam c'16} sind gleichbedeutend
+  (eine Achtel, eine Sechzehntel).
+
+  Gleich hohe Noten können mit einem \emph{Bindebogen} (\foreignlanguage{english}{tie}) zu einer verbunden werden,
+  und eine \emph{punktierte} (\foreignlanguage{english}{dotted}) Note ist 50\% länger:
+  \lilypond[fragment]{c'8.} = \lilypond[fragment]{c'8~ c'16}.
+  (Noten können auch mehrfach punktiert werden.)
+\end{frame}
+
+\begin{frame}
+  \frametitle{Notenlänge}
+  Zu guter Letzt: eine \emph{Triole} (\foreignlanguage{english}{triplet}) verteilt drei Noten gleichmäßig über die Länge,
+  die normalerweise nur zwei gleichartige Noten einnehmen.
+  Zum Beispiel ist
+  \begin{lilypond}[fragment]
+    \tuplet 3/2 { c'8 c' c' }
+  \end{lilypond}
+  nur zwei Achtel (eine Viertel) lang, nicht drei.
+
+  Und dann gibt es noch eine \emph{Pause} (\foreignlanguage{english}{rest}) entsprechend jeder Notenlänge –
+  von ganz zu zweiunddreißigstel:
+  \begin{lilypond}[fragment]
+    \cadenzaOn
+    r1 r2 r4 r8 r16 r32
+  \end{lilypond}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Notenhöhe}
+  Die Höhe der Note wird durch die Position auf den \emph{Notenlinien} (\foreignlanguage{english}{staff lines}) bestimmt.
+  Auf Deutsch sind die Notennamen Buchstaben: C, D, E, F, G, A, H, C.
+  Nach sieben Tönen wiederholt sich das ganze, dazwischen
+  (z.\,B. zwischen den beiden Cs hier) liegt eine \emph{Oktave} (\foreignlanguage{english}{octave}).
+  (Ja, das ist \foreignlanguage{english}{off by one}. Ist halt so.)
+
+  Auf Englisch werden ähnliche Namen verwendet,
+  dort heißt unser H allerdings B.
+  Ebenfalls geläufig sind aber, soweit ich weiß,
+  do re mi fa so la ti do.
+  Was im täglichen Sprachgebrauch häufiger verwendet wird, weiß ich tatsächlich nicht,
+  aber LilyPond hält sich an die Buchstaben.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Notenhöhe}
+  Noten können durch \emph{Vorzeichen} (\foreignlanguage{english}{accidentals}) erhöht oder erniedrigt werden.
+
+  Das
+  \begin{lilypond}
+    \markup { \sharp }
+  \end{lilypond}
+  (\emph{Kreuz} / sharp) erhöht die Note um einen Halbton.
+  Das wird durch ein Suffix am Notennamen verdeutlicht:
+  auf Deutsch ein „-is“, auf Englisch ein \foreignlanguage{english}{“sharp”}.
+  Zum Beispiel wird F zum Fis bzw. \foreignlanguage{english}{F sharp}.
+
+  Das
+  \begin{lilypond}
+    \markup { \flat }
+  \end{lilypond}
+  (\emph{B} / flat) erniedrigt die Note um einen Halbton.
+  Das Suffix dafür ist „-es“ bzw. \foreignlanguage{english}{“flat”},
+  also wird zum Beispiel ein E zum Es bzw. \foreignlanguage{english}{E flat}.
+  (Ausnahme: Auf Deutsch wird das H zum B.
+  Im Englischen ist das regulärer, dort heißt das H ja bereits B und wird entsprechend zum \foreignlanguage{english}{B flat}.)
+
+  Die deutschen Suffixe werden kurz ausgesprochen,
+  also z.\,B. wie in „Liste“ und „Messe“,
+  nicht wie in „präzise“ und „lesen“.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Notenhöhe}
+  Vorzeichen können am Anfang einer Notenzeile angegeben werden,
+  dann gelten sie für die gesamte Zeile –
+  es sei denn, sie werden durch ein
+  \begin{lilypond}
+    \markup { \natural }
+  \end{lilypond}
+  (\emph{Auflösungszeichen} / \foreignlanguage{english}{natural}) aufgehoben.
+
+  Also ist
+  \begin{lilypond}
+    \relative c'' {
+      \key d \major
+      d e fis g |
+      fis f fis2 |
+    }
+  \end{lilypond}
+  D, E, Fis, G, Fis, F, Fis.
+  Das Auflösungszeichen gilt bis zum Ende des Taktes (senkrechte Linie: \emph{Taktstrich} / \foreignlanguage{english}{bar line}),
+  also ist für das letzte Fis wieder ein explizites Vorzeichen nötig.
+
+  Diese Vorzeichen (\foreignlanguage{english}{key signature})
+  bestimmen die \emph{Tonart} (\foreignlanguage{english}{key}) des Stücks –
+  zwei Kreuze bedeuten zum Beispiel D-\emph{Dur} (\foreignlanguage{english}{D major}) oder H-\emph{Moll} (\foreignlanguage{english}{B minor}).
+\end{frame}
+
+\begin{frame}
+  \frametitle{Glossar}
+  \begin{table}
+    \caption{Englisch-Deutsch (alphabetisch sortiert)}
+    \begin{tabular}{l|l}
+      \foreignlanguage{english}{accidental} & Vorzeichen \\
+      \foreignlanguage{english}{bar} & Takt \\
+      \foreignlanguage{english}{bar line} & Taktstrich \\
+      \foreignlanguage{english}{beam} & Balken \\
+      \foreignlanguage{english}{dotted} & punktiert \\
+      \foreignlanguage{english}{flag} & Fähnchen \\
+      \foreignlanguage{english}{flat} & B \\
+      \foreignlanguage{english}{head} & Kopf \\
+      \foreignlanguage{english}{key} & Tonart \\
+      \foreignlanguage{english}{key signature} & Vorzeichen \\
+    \end{tabular}
+    \hspace{5em}
+    \begin{tabular}{l|l}
+      \foreignlanguage{english}{major (key)} & Dur(-Tonart) \\
+      \foreignlanguage{english}{minor (key)} & Moll(-Tonart) \\
+      \foreignlanguage{english}{natural} & Auflösungszeichen \\
+      \foreignlanguage{english}{octave} & Oktave \\
+      \foreignlanguage{english}{rest} & Pause \\
+      \foreignlanguage{english}{sharp} & Kreuz \\
+      \foreignlanguage{english}{staff lines} & Notenlinien \\
+      \foreignlanguage{english}{stem} & Hals \\
+      \foreignlanguage{english}{tie} & Bindebogen \\
+      \foreignlanguage{english}{triplet} & Triole \\
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+\end{document}
