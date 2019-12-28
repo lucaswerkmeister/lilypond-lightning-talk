@@ -5,13 +5,13 @@
 \usepackage[super]{nth}
 
 \beamertemplatenavigationsymbolsempty
-\setbeamertemplate{headline}[text line]{%
+\setbeamertemplate{footline}[text line]{%
   \parbox{0.3\linewidth}{%
     \insertshortauthor%
   }%
   \hfill%
   \parbox{0.3\linewidth}{%
-    \url{https://tinyurl.com/ec19-lilypond}%
+    \url{https://tinyurl.com/36c3-lilypond}%
   }%
   \hfill%
   \raggedleft\insertframenumber/9%
