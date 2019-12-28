@@ -126,7 +126,7 @@
   \begin{frame}[fragile]
     \frametitle{Scheme}
     \begin{figure}
-      \lstinputlisting[basicstyle=\tiny]{end.ly}
+      \lstinputlisting[basicstyle=\tiny,language=lisp]{end.ly}
     \end{figure}
   \end{frame}
 }
