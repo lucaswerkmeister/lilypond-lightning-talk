@@ -1,0 +1,13 @@
+??/
+snippet-*.ly
+*.tex
+
+*.aux
+*.dep
+*.log
+*.nav
+*.out
+*.pdf
+*.snm
+*.toc
+*.vrb
