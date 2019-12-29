@@ -75,7 +75,7 @@
   nur zwei Achtel (eine Viertel) lang, nicht drei.
 
   Und dann gibt es noch eine \emph{Pause} (\foreignlanguage{english}{rest}) entsprechend jeder Notenlänge –
-  von ganz zu zweiunddreißigstel:
+  hier z.\,B. von ganz zu zweiunddreißigstel:
   \begin{lilypond}[fragment]
     \cadenzaOn
     r1 r2 r4 r8 r16 r32
